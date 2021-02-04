@@ -25,11 +25,11 @@ Class Dragon extends Creature {
     }
 
     function voler($cases){
-      $this->setPosition(position()+$cases);
+      $this->setPosition($this->position()+$cases);
   }
     
     function souffleSur(Creature $victime){
-        $this->aPortee(this, $victime);
+        $this->attaqueDragon($victime);
     }
     
 }
