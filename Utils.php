@@ -30,7 +30,7 @@ trait Utils{
             $this->faiblir($this->distance($defenseur));
             echo ' Il reste ' .$this->pointsDeVie(). ' points de vie à ' .$this->nom(). ' et ' .$defenseur->pointsDeVie(). ' à ' .$defenseur->nom();
         }
-        if(!$defenseur->isVivant()){
+        if(!$defenseur->isVivant()&& $this->isVivant()){
             $this->setNiveau($this->niveau()+1);
             echo ' Felicitation, ' .$this->nom(). ' gagne 1 niveau. Il est desormais niveau : ' .$this->niveau();
         }
@@ -42,7 +42,7 @@ trait Utils{
             $defenseur->faiblir($this->pointsAttaque()+$this->dosePoison());
             echo ' Il reste ' .$this->pointsDeVie(). ' points de vie à ' .$this->nom(). ' et ' .$defenseur->pointsDeVie(). ' à ' .$defenseur->nom();
         }
-        if(!$defenseur->isVivant()){
+        if(!$defenseur->isVivant()&& $this->isVivant()){
             $this->setNiveau($this->niveau()+1);
             echo ' Felicitation, ' .$this->nom(). ' gagne 1 niveau. Il est desormais niveau : ' .$this->niveau();
         }
